@@ -25,6 +25,7 @@ namespace beisbol
             equipo1.jugadores.Add(new Jugador("Roberto Carrizo", "7"));
             equipo1.jugadores.Add(new Jugador("Andrew Garcia", "8"));
             equipo1.jugadores.Add(new Jugador("Potente Powers", "9"));
+            equipo1.estadio = new Estadio("papa johns", "kino y jesus garcia", 70000);
 
             equipos.Add(equipo1);
 
@@ -47,6 +48,14 @@ namespace beisbol
             foreach (Equipo equipox in equipos)
             {
                 Console.WriteLine("Equipo: " + equipox.Nombre);
+                if(equipox.estadio!=null)
+                {
+                    Console.WriteLine("Estadio: " + equipox.estadio.Nombre);
+                }
+                else
+                {
+                    Console.WriteLine("Estadio: No hay estadio");
+                }
                 foreach (Jugador jugadorx in equipox.jugadores)
                 {
                     Console.WriteLine("Jugador" + jugadorx.Numero+": "+jugadorx.Nombre);
